@@ -1,14 +1,20 @@
 <?php
-    $pelicula1= "Bienvenidos al fin del mundo";
-    $pelicula2= "Valerian y la ciudad de los mil planetas";
-    $pelicula3= "Niños grandes";
-    $pelicula4= "El lobo de Wall Street";
-    $pelicula5= "El hombre de acero";
-    $imgPeli1= "assets/bienvenidos.jpg";
-    $imgPeli2= "assets/valerian.jpg";
-    $imgPeli3= "assets/ninos.jpg";
-    $imgPeli4= "assets/lobo.jpg";
-    $imgPeli5= "assets/superman.jpg";
+
+    $peliculas = [
+        "Bienvenidos al fin del mundo",
+        "Valerian y la ciudad de los mil planetas",
+        "Niños grandes",
+        "El lobo de Wall Street",
+        "El hombre de acero"
+    ];
+
+    $imagenes = [
+        "assets/bienvenidos.jpg",
+        "assets/valerian.jpg",
+        "assets/ninos.jpg",
+        "assets/lobo.jpg",
+        "assets/superman.jpg"
+    ];
 
 ?>
 
@@ -37,15 +43,12 @@
             </thead>
             <tbody>
                 <?php
-                        for($i=1; $i <=5 ; $i++) { 
-                                echo "<tr>";
-                                echo "<th scope='row'>$i</th>";
-                                $nombrePeli = "pelicula".$i;
-                                $imgPeli = "imgPeli".$i;
-                                //El doble signo de $ es para variables variables
-                                echo "<td>".$$nombrePeli."</td>";
-                                echo "<td><img src='".$$imgPeli."' width='100px'></td>";
-                                echo "</tr>";
+                        for($i = 0; $i < count($peliculas); $i++) {
+                            echo "<tr>";
+                            echo "<th scope='row'>" . ($i + 1) . "</th>";
+                            echo "<td>" . $peliculas[$i] . "</td>";
+                            echo "<td><img src='" . $imagenes[$i] . "' width='100px'></td>";
+                            echo "</tr>";
                         }
                 ?>
             </tbody>

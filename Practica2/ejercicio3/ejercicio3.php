@@ -17,13 +17,14 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
-    <div>
-        <div class="resu">
+<body class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="bg-dark text-white card" style="width: 30rem;">
+        <div class="container mt-5">
             <h1>Ejercicio 3: Nombre aleatorio; par o impar</h1>
             <?php aleatorio();?>
+            <a href="../index.php" class="btn btn-primary">Volver</a>
         </div>
-        <p><a href="../index.php">Volver</a></p>
+        
 
     </div>
 </body>
